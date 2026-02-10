@@ -1,86 +1,2995 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odono John Jachukwu | WDD 130</title>
+    <title>Odono John Jachukwu | Web & Python Developer</title>
     <meta name="description"
-      content="describe your home page here using keywords like your name,the course, the purpose of the page. ">
+      content="Personal website of Odono John Jachukwu, a web development and Python programming student from Ebonyi State, Nigeria.">
+    <meta name="keywords"
+      content="web development, python programming, Nigeria, Ebonyi, student, Odono John Jachukwu">
     <meta name="author" content="Odono John Jachukwu">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Odono John Jachukwu | Web & Python Developer">
+    <meta property="og:description"
+      content="Web development and Python programming student documenting progress and projects.">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --primary-light: #60a5fa;
+            --secondary-color: #f59e0b;
+            --secondary-dark: #d97706;
+            --accent-color: #8b5cf6;
+            --python-color: #3776ab;
+            --python-yellow: #ffde57;
+            --dark-color: #0f172a;
+            --dark-light: #1e293b;
+            --light-color: #f8fafc;
+            --light-dark: #e2e8f0;
+            --text-color: #334155;
+            --text-light: #64748b;
+            --success-color: #10b981;
+            --danger-color: #ef4444;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --border-radius: 12px;
+            --border-radius-lg: 20px;
+            --border-radius-sm: 8px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            --gradient-python: linear-gradient(135deg, var(--python-color) 0%, var(--python-yellow) 100%);
+            --gradient-dark: linear-gradient(135deg, var(--dark-color) 0%, var(--dark-light) 100%);
+            --gradient-light: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+
+        .dark-mode {
+            --primary-color: #60a5fa;
+            --primary-dark: #3b82f6;
+            --primary-light: #93c5fd;
+            --secondary-color: #fbbf24;
+            --secondary-dark: #f59e0b;
+            --accent-color: #a78bfa;
+            --python-color: #4b8bbe;
+            --python-yellow: #ffde57;
+            --dark-color: #f8fafc;
+            --dark-light: #e2e8f0;
+            --light-color: #0f172a;
+            --light-dark: #1e293b;
+            --text-color: #e2e8f0;
+            --text-light: #94a3b8;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+            --gradient-light: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+            transition: var(--transition-slow);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+
+        .highlight-python {
+            color: var(--python-color);
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+
+        .highlight:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background-color: var(--primary-light);
+            opacity: 0.3;
+            z-index: -1;
+            transition: var(--transition);
+        }
+
+        .highlight-python:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background-color: var(--python-yellow);
+            opacity: 0.3;
+            z-index: -1;
+            transition: var(--transition);
+        }
+
+        .highlight:hover:after {
+            height: 100%;
+            opacity: 0.2;
+        }
+
+        .highlight-python:hover:after {
+            height: 100%;
+            opacity: 0.2;
+        }
+
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--light-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            background: var(--gradient-primary);
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+
+        .loader::after {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--light-color);
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--light-color);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-scrolled {
+            padding: 5px 0;
+            backdrop-filter: blur(10px);
+            background-color: rgba(248, 250, 252, 0.9);
+        }
+
+        .dark-mode .header-scrolled {
+            background-color: rgba(15, 23, 42, 0.9);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        .header-scrolled .navbar {
+            padding: 10px 0;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 1.05rem;
+            position: relative;
+            padding: 5px 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a:hover:after,
+        .nav-links a.active:after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-toggle {
+            width: 50px;
+            height: 26px;
+            background: var(--light-dark);
+            border-radius: 50px;
+            position: relative;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .dark-mode .theme-toggle {
+            background: var(--primary-color);
+        }
+
+        .dark-mode .theme-toggle:after {
+            transform: translateX(24px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 10px;
+            border: none;
+            color: white;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 160px;
+            padding-bottom: 100px;
+            background: var(--gradient-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%232563eb' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            line-height: 1.2;
+        }
+
+        .hero-text h2 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--text-light);
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 15px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-python {
+            background: var(--gradient-python);
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--gradient-dark);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .btn-python:before {
+            background: var(--gradient-python);
+        }
+
+        .btn:hover:before {
+            width: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline-python {
+            background: transparent;
+            border: 2px solid var(--python-color);
+            color: var(--python-color);
+        }
+
+        .btn-outline:before {
+            background: var(--gradient-primary);
+        }
+
+        .btn-outline-python:before {
+            background: var(--gradient-python);
+        }
+
+        .btn-outline:hover,
+        .btn-outline-python:hover {
+            color: white;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .profile-img-container {
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+            transition: var(--transition);
+        }
+
+        .profile-img-container:hover {
+            transform: perspective(1000px) rotateY(0) rotateX(0);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .floating-element {
+            position: absolute;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element-python {
+            background: var(--gradient-python);
+        }
+
+        .floating-element-1 {
+            top: 20px;
+            right: -20px;
+            animation-delay: 0s;
+        }
+
+        .floating-element-2 {
+            bottom: 40px;
+            left: -20px;
+            animation-delay: 2s;
+        }
+
+        .floating-element-3 {
+            bottom: 100px;
+            right: -30px;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: var(--dark-color);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .skill-tag {
+            background: var(--light-dark);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+
+        .skill-tag-python {
+            background: linear-gradient(135deg, var(--python-color) 20%, var(--python-yellow) 100%);
+            color: white;
+        }
+
+        .skill-tag:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .skill-tag-python:hover {
+            background: linear-gradient(135deg, var(--python-color) 0%, var(--python-yellow) 100%);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 5px 15px rgba(55, 118, 171, 0.3);
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .image-frame {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+
+        .image-frame:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: -20px;
+            bottom: -20px;
+            border: 3px solid var(--primary-color);
+            border-radius: var(--border-radius-lg);
+            z-index: -1;
+        }
+
+        /* Progress Section */
+        .progress-section {
+            background: var(--gradient-light);
+        }
+
+        .progress-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .progress-card {
+            background: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .progress-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .progress-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .progress-card-python i {
+            color: var(--python-color);
+        }
+
+        .progress-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: var(--light-dark);
+            border-radius: 5px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 5px;
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+
+        .progress-fill-python {
+            background: var(--gradient-python);
+        }
+
+        /* Interests Section */
+        .interests-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .interest-card {
+            background: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 35px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .interest-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-primary);
+        }
+
+        .interest-card-python:before {
+            background: var(--gradient-python);
+        }
+
+        .interest-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .interest-card i {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .interest-card-python i {
+            color: var(--python-color);
+        }
+
+        .interest-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .temple-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .temple-list li {
+            padding: 12px 0;
+            border-bottom: 1px dashed var(--light-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .temple-list li:last-child {
+            border-bottom: none;
+        }
+
+        .temple-list i {
+            font-size: 1rem;
+            color: var(--secondary-color);
+        }
+
+        /* Ebonyi State Section */
+        .ebonyi-section {
+            background: var(--gradient-light);
+        }
+
+        .ebonyi-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .ebonyi-facts {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .fact-card {
+            background: var(--light-color);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .fact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .fact-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .fact-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-img {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 200px;
+        }
+
+        .gallery-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .gallery-img:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-img:nth-child(3) {
+            grid-column: 1 / span 2;
+        }
+
+        /* Projects Section */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--light-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .project-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .project-card:hover .project-img img {
+            transform: scale(1.1);
+        }
+
+        .project-info {
+            padding: 25px;
+        }
+
+        .project-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .project-tag {
+            background: var(--light-dark);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .project-tag-python {
+            background: var(--python-color);
+            color: white;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .contact-card {
+            background: var(--light-color);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .contact-form {
+            background: var(--light-color);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid var(--light-dark);
+            border-radius: var(--border-radius-sm);
+            background: var(--light-color);
+            color: var(--text-color);
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gradient-dark);
+            color: white;
+            padding: 80px 0 30px;
+            position: relative;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: white;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            color: #cbd5e1;
+            margin-bottom: 15px;
+            display: block;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Python Snake Animation */
+        .python-animation {
+            position: relative;
+            width: 100%;
+            height: 40px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .python-snake {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: var(--python-color);
+            border-radius: 50%;
+            animation: snakeMove 10s linear infinite;
+        }
+
+        .python-snake:nth-child(2) {
+            animation-delay: 0.5s;
+            background: var(--python-yellow);
+            width: 30px;
+            height: 30px;
+            top: 5px;
+        }
+
+        .python-snake:nth-child(3) {
+            animation-delay: 1s;
+            background: var(--python-color);
+            width: 25px;
+            height: 25px;
+            top: 7.5px;
+        }
+
+        @keyframes snakeMove {
+            0% {
+                left: -50px;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        /* Auth Modal */
+        .auth-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .auth-modal.active {
+            display: flex;
+        }
+
+        .auth-content {
+            background: var(--light-color);
+            width: 90%;
+            max-width: 500px;
+            border-radius: var(--border-radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+
+        .auth-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .auth-close:hover {
+            color: var(--primary-color);
+        }
+
+        .auth-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .auth-tab {
+            flex: 1;
+            padding: 15px;
+            background: var(--light-dark);
+            border: none;
+            border-radius: var(--border-radius-sm);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .auth-tab.active {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .auth-form {
+            display: none;
+        }
+
+        .auth-form.active {
+            display: block;
+        }
+
+        .form-error {
+            color: var(--danger-color);
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .form-error.active {
+            display: block;
+        }
+
+        .form-success {
+            color: var(--success-color);
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .form-success.active {
+            display: block;
+        }
+
+        /* Admin Panel */
+        .admin-panel {
+            display: none;
+        }
+
+        .admin-panel.active {
+            display: block;
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--light-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .admin-table th {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .admin-table td {
+            padding: 15px;
+            border-bottom: 1px solid var(--light-dark);
+        }
+
+        .admin-table tr:hover {
+            background: rgba(37, 99, 235, 0.05);
+        }
+
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status-new {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--danger-color);
+        }
+
+        .status-read {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--primary-color);
+        }
+
+        .status-replied {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success-color);
+        }
+
+        .admin-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .admin-action-btn {
+            padding: 5px 10px;
+            border-radius: var(--border-radius-sm);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.8rem;
+        }
+
+        .admin-action-btn.read {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--primary-color);
+        }
+
+        .admin-action-btn.replied {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success-color);
+        }
+
+        .admin-action-btn.delete {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--danger-color);
+        }
+
+        .admin-action-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--light-dark);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-text h1 {
+                font-size: 3rem;
+            }
+
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+
+            .hero-content,
+            .about-content,
+            .ebonyi-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .about-image,
+            .ebonyi-image {
+                order: -1;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--light-color);
+                flex-direction: column;
+                padding: 30px;
+                box-shadow: var(--shadow);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .admin-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 80px 0;
+            }
+
+            .hero {
+                padding-top: 140px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero-text h2 {
+                font-size: 1.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .ebonyi-facts,
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-img:nth-child(3) {
+                grid-column: 1;
+            }
+
+            .contact-form {
+                padding: 25px;
+            }
+
+            .floating-element {
+                display: none;
+            }
+
+            .python-animation {
+                display: none;
+            }
+
+            .auth-content {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .interest-card,
+            .project-card,
+            .progress-card {
+                padding: 25px;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .auth-tabs {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
 
-    <header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="wwr/">Rafting Website</a>
-            <a href="wwr/site-plan-rafting.html">site-plan-rafting</a>
+    <!-- Auth Modal -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-content">
+            <button class="auth-close" id="authClose">
+                <i class="fas fa-times"></i>
+            </button>
 
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="register">Register</button>
+            </div>
 
-        </nav>
+            <form class="auth-form active" id="loginForm">
+                <h3 style="margin-bottom: 25px;">Login to Your Account</h3>
+
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" class="form-control"
+                      placeholder="Enter your email" required>
+                    <div class="form-error" id="loginEmailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" class="form-control"
+                      placeholder="Enter your password" required>
+                    <div class="form-error" id="loginPasswordError"></div>
+                </div>
+
+                <div class="form-success" id="loginSuccess"></div>
+                <div class="form-error" id="loginError"></div>
+
+                <button type="submit" class="btn" style="width: 100%;">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+            </form>
+
+            <form class="auth-form" id="registerForm">
+                <h3 style="margin-bottom: 25px;">Create New Account</h3>
+
+                <div class="form-group">
+                    <label for="registerName">Full Name</label>
+                    <input type="text" id="registerName" class="form-control"
+                      placeholder="Enter your full name" required>
+                    <div class="form-error" id="registerNameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="registerEmail">Email Address</label>
+                    <input type="email" id="registerEmail" class="form-control"
+                      placeholder="Enter your email" required>
+                    <div class="form-error" id="registerEmailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" class="form-control"
+                      placeholder="Enter your password" required>
+                    <div class="form-error" id="registerPasswordError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Confirm Password</label>
+                    <input type="password" id="registerConfirmPassword" class="form-control"
+                      placeholder="Confirm your password" required>
+                    <div class="form-error" id="registerConfirmPasswordError"></div>
+                </div>
+
+                <div class="form-success" id="registerSuccess"></div>
+                <div class="form-error" id="registerError"></div>
+
+                <button type="submit" class="btn" style="width: 100%;">
+                    <i class="fas fa-user-plus"></i> Register
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#home" class="logo">
+                    <div class="logo-icon">OJ</div>
+                    <span>Odono</span>
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#progress">Progress</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#ebonyi">Ebonyi</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li id="authNavItem">
+                        <a href="#" id="authNavLink">Login</a>
+                    </li>
+                    <li id="adminNavItem" style="display: none;">
+                        <a href="#admin">Admin</a>
+                    </li>
+                </ul>
+
+                <div class="header-controls">
+                    <button class="theme-toggle" id="themeToggle"
+                      aria-label="Toggle dark mode"></button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="animate-on-scroll">Odono John Jachukwu</h1>
+                    <h2 class="animate-on-scroll">Full-Stack Web & Python Developer</h2>
+                    <p class="animate-on-scroll">Hello! I'm a passionate full-stack web and <span
+                          class="highlight-python">Python</span> development student from <span
+                          class="highlight">Ebonyi State, Nigeria</span>. Building complete web
+                        applications with frontend and backend technologies.</p>
 
-        <h1>Odono John Jachukwu | WDD 130</h1>
+                    <div class="hero-buttons animate-on-scroll">
+                        <a href="#projects" class="btn">
+                            <i class="fas fa-code"></i> View Projects
+                        </a>
+                        <a href="#contact" class="btn btn-outline-python">
+                            <i class="fab fa-python"></i> Contact Me
+                        </a>
+                    </div>
 
-        <img src="images/profile.jpg" alt="Hello, my name is Odono John Jachukwu" width="200">
+                    <div class="hero-stats animate-on-scroll">
+                        <div class="stat">
+                            <div class="stat-number" data-count="100">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-count="2">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-count="50">0</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                    </div>
 
-        <p>
-            Hello, my name is Odono John Jachukwu. I’m from Ebonyi State, Nigeria.
-            I am a student learning web development and programming,
-            documenting my progress and projects.
-        </p>
-        <ul class="box indent">
-            <li><a href="https://www.churchofjesuschrist.org/temples/details/philadelphia-pennsylvania-temple"
-                  target="_blank">Philadelphia Pennsylvania Temple</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/temples/details/paris-france-temple"
-                  target="_blank">Paris France Temple"</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/temples/details/lima-peru-los-olivos-temple"
-                  target="_blank">Berlin Germany Temple"</a></li>
-        </ul>
-    </main>
-    <aside class="box">
-        <h2>ebonyi state</h2>
-        <img src="images/ebonyi.jpg" alt="Ebonyi state">
-        <p>Ebonyi State is a state in the **South-East of Nigeria**. It was created in **1996** from
-            parts
-            of Abia and Enugu States. The capital city is Abakaliki.
+                    <!-- Python Animation -->
+                    <div class="python-animation">
+                        <div class="python-snake"></div>
+                        <div class="python-snake"></div>
+                        <div class="python-snake"></div>
+                    </div>
+                </div>
 
-            The people of Ebonyi State are mainly **Igbo**, and they speak the **Igbo language**.
-            The people are
-            known to be hardworking and peaceful.
+                <div class="hero-image">
+                    <div class="profile-img-container animate-on-scroll">
+                        <img
+                          src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                          alt="Odono John Jachukwu" class="profile-img">
+                    </div>
 
-            Ebonyi State is known as the **“Salt of the Nation”** because of its natural **salt
-            deposits**,
-            especially in **Okposi** and **Uburu**. The state is also good for **farming**. Crops
-            grown there
-            include **rice, yam, cassava, and maize**.
+                    <div class="floating-element floating-element-1">
+                        <i class="fas fa-code"></i> Full-Stack
+                    </div>
+                    <div class="floating-element floating-element-2 floating-element-python">
+                        <i class="fab fa-python"></i> Backend
+                    </div>
+                    <div class="floating-element floating-element-3">
+                        <i class="fas fa-database"></i> MongoDB
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            There are schools and higher institutions in the state, such as **Ebonyi State
-            University**. The
-            environment is mostly **rural** and calm, with fertile land.
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Get to know more about my background, education, and full-stack development
+                    skills</p>
+            </div>
 
-            In summary, Ebonyi State is an important state in Nigeria because of its **agriculture,
-            natural
-            resources, and culture**.
-        </p>
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <h3>Full-Stack Development Journey</h3>
+                    <p>I am currently pursuing my passion for technology through <span
+                          class="highlight">full-stack web development</span> and <span
+                          class="highlight-python">Python programming</span>. I'm focused on
+                        mastering both frontend technologies and backend development with Node.js,
+                        Express, and MongoDB.</p>
+                    <p>My educational journey is centered around building complete, production-ready
+                        applications. I believe in end-to-end development that includes database
+                        design, API creation, and responsive UI implementation.</p>
+                    <p>I'm from <span class="highlight">Ebonyi State, Nigeria</span>, and my
+                        background gives me a unique perspective on solving problems and creating
+                        solutions that can make a difference in my community and beyond.</p>
+                    <p>My goal is to leverage full-stack technology to create impactful web
+                        applications that solve real-world problems, particularly those relevant to
+                        my community in Nigeria.</p>
 
-    </aside>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag skill-tag-python">Python</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">UI/UX</span>
+                    </div>
+                </div>
 
+                <div class="about-image animate-on-scroll">
+                    <div class="image-frame">
+                        <img
+                          src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                          alt="Full-Stack Development">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Section -->
+    <section id="progress" class="progress-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Learning Progress</h2>
+                <p>Tracking my full-stack development journey and skills growth</p>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-card animate-on-scroll">
+                    <i class="fas fa-code"></i>
+                    <h3>Frontend Development</h3>
+                    <p>Mastering HTML, CSS, JavaScript and modern frameworks to create engaging user
+                        interfaces.</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="85"></div>
+                    </div>
+                </div>
+
+                <div class="progress-card animate-on-scroll progress-card-python">
+                    <i class="fab fa-python"></i>
+                    <h3>Backend Development</h3>
+                    <p>Learning Node.js, Express, MongoDB, REST APIs, authentication, and
+                        server-side programming.</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill progress-fill-python" data-width="80"></div>
+                    </div>
+                </div>
+
+                <div class="progress-card animate-on-scroll">
+                    <i class="fas fa-server"></i>
+                    <h3>Database Design</h3>
+                    <p>Learning database modeling, MongoDB operations, data relationships, and query
+                        optimization.</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="75"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Panel Section (Hidden by default) -->
+    <section id="admin" class="admin-panel">
+        <div class="container">
+            <div class="admin-header">
+                <div class="section-title" style="margin-bottom: 0; text-align: left;">
+                    <h2>Admin Panel</h2>
+                    <p>Manage contact form submissions</p>
+                </div>
+                <div>
+                    <button class="btn btn-outline" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+            </div>
+
+            <div id="adminContent">
+                <div class="spinner" id="adminSpinner"></div>
+                <div id="adminTableContainer" style="display: none;">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Subject</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contactsTableBody">
+                            <!-- Contacts will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests" class="interests">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Interests</h2>
+                <p>Exploring full-stack technology, Python programming, and personal passions</p>
+            </div>
+
+            <div class="interests-container">
+                <div class="interest-card animate-on-scroll">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Full-Stack Development</h3>
+                    <p>Building complete web applications from database to UI. I enjoy creating REST
+                        APIs, designing schemas, and implementing responsive frontends.</p>
+                    <p>Currently working with MERN stack (MongoDB, Express, React, Node.js) and
+                        exploring Python backend alternatives.</p>
+                </div>
+
+                <div class="interest-card animate-on-scroll interest-card-python">
+                    <i class="fab fa-python"></i>
+                    <h3>Backend Programming</h3>
+                    <p>Exploring server-side development with Node.js and Python. Focus on API
+                        design, authentication, database optimization, and deployment.</p>
+                    <p>Current backend interests: JWT authentication, WebSockets, microservices
+                        architecture, and cloud deployment.</p>
+                </div>
+
+                <div class="interest-card animate-on-scroll">
+                    <i class="fas fa-archway"></i>
+                    <h3>Temples I Admire</h3>
+                    <p>I appreciate beautiful architecture and spiritual spaces. Some temples that I
+                        find particularly inspiring include:</p>
+                    <ul class="temple-list">
+                        <li><i class="fas fa-star"></i> Philadelphia Pennsylvania Temple</li>
+                        <li><i class="fas fa-star"></i> Paris France Temple</li>
+                        <li><i class="fas fa-star"></i> Berlin Germany Temple</li>
+                    </ul>
+                    <p>These structures represent incredible architectural achievement and spiritual
+                        significance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ebonyi State Section -->
+    <section id="ebonyi" class="ebonyi-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Homeland: Ebonyi State</h2>
+                <p>Discover the beauty and richness of my home state in Nigeria</p>
+            </div>
+
+            <div class="ebonyi-content">
+                <div class="about-text animate-on-scroll">
+                    <h3>The "Salt of the Nation"</h3>
+                    <p><span class="highlight">Ebonyi State</span> is located in the <span
+                          class="highlight">South-East of Nigeria</span>. It was created in <span
+                          class="highlight">1996</span> from parts of Abia and Enugu States, with
+                        its capital in Abakaliki.</p>
+                    <p>The people of Ebonyi State are predominantly <span
+                          class="highlight">Igbo</span>, speaking the <span class="highlight">Igbo
+                            language</span>. Known for their hardworking and peaceful nature, Ebonyi
+                        people contribute significantly to Nigeria's agricultural and economic
+                        sectors.</p>
+                    <p>The state earns its nickname <span class="highlight">"Salt of the
+                            Nation"</span> from its abundant natural <span class="highlight">salt
+                            deposits</span>, particularly in <span class="highlight">Okposi</span>
+                        and <span class="highlight">Uburu</span>. These resources have been vital to
+                        the local economy for generations.</p>
+
+                    <div class="ebonyi-facts">
+                        <div class="fact-card">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h4>Established</h4>
+                            <p>1996</p>
+                        </div>
+                        <div class="fact-card">
+                            <i class="fas fa-city"></i>
+                            <h4>Capital</h4>
+                            <p>Abakaliki</p>
+                        </div>
+                        <div class="fact-card">
+                            <i class="fas fa-users"></i>
+                            <h4>Main Ethnicity</h4>
+                            <p>Igbo</p>
+                        </div>
+                        <div class="fact-card">
+                            <i class="fas fa-mountain"></i>
+                            <h4>Known For</h4>
+                            <p>Salt Production</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ebonyi-image animate-on-scroll">
+                    <div class="image-gallery">
+                        <div class="gallery-img">
+                            <img
+                              src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
+                              alt="Ebonyi Landscape">
+                        </div>
+                        <div class="gallery-img">
+                            <img
+                              src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1072&q=80"
+                              alt="Nigerian Culture">
+                        </div>
+                        <div class="gallery-img">
+                            <img
+                              src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                              alt="African Agriculture">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Projects</h2>
+                <p>Showcasing my full-stack web development and Python programming work</p>
+            </div>
+
+            <div class="projects-container">
+                <div class="project-card animate-on-scroll">
+                    <div class="project-img">
+                        <img
+                          src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+                          alt="Portfolio Website">
+                    </div>
+                    <div class="project-info">
+                        <h3>Personal Portfolio</h3>
+                        <p>A fully responsive portfolio website with backend API, contact form, and
+                            project management.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Node.js</span>
+                        </div>
+                        <a href="#" class="btn" style="margin-top: 15px;">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll">
+                    <div class="project-img">
+                        <img
+                          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                          alt="E-commerce Website">
+                    </div>
+                    <div class="project-info">
+                        <h3>E-commerce Platform</h3>
+                        <p>Full-stack online store with user authentication, product management,
+                            shopping cart, and payment integration.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag project-tag-python">Python</span>
+                            <span class="project-tag">Django</span>
+                            <span class="project-tag">MongoDB</span>
+                        </div>
+                        <a href="#" class="btn" style="margin-top: 15px;">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll">
+                    <div class="project-img">
+                        <img
+                          src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                          alt="Task Management App">
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Management API</h3>
+                        <p>REST API for task management with JWT authentication, user roles, and
+                            real-time updates.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">Express</span>
+                            <span class="project-tag">MongoDB</span>
+                            <span class="project-tag">JWT</span>
+                        </div>
+                        <a href="#" class="btn" style="margin-top: 15px;">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Feel free to reach out for collaborations, questions, or just to say hello</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card animate-on-scroll">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Ebonyi State, Nigeria</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card animate-on-scroll">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>odono.jachukwu@example.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card animate-on-scroll">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+234 XXX XXX XXXX</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card animate-on-scroll">
+                        <div class="contact-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div>
+                            <h4>Backend API</h4>
+                            <p>Node.js, Express, MongoDB</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form animate-on-scroll">
+                    <h3 style="margin-bottom: 25px;">Send Me a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control"
+                              placeholder="Enter your name" required>
+                            <div class="form-error" id="nameError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control"
+                              placeholder="Enter your email" required>
+                            <div class="form-error" id="emailError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control"
+                              placeholder="Enter subject" required>
+                            <div class="form-error" id="subjectError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control"
+                              placeholder="Enter your message" required></textarea>
+                            <div class="form-error" id="messageError"></div>
+                        </div>
+
+                        <div class="form-success" id="contactSuccess"></div>
+                        <div class="form-error" id="contactError"></div>
+
+                        <button type="submit" class="btn" style="width: 100%;"
+                          id="contactSubmitBtn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>©2026 ◈ Odono John Jachukwu</p>
-        <a href="https://facebook.com">facebook</a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Odono John Jachukwu</h3>
+                    <p>Full-stack web and Python development student passionate about creating
+                        complete digital solutions and documenting my learning journey.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Me</a>
+                    <a href="#progress">My Progress</a>
+                    <a href="#interests">My Interests</a>
+                    <a href="#ebonyi">Ebonyi State</a>
+                    <a href="#projects">My Projects</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Tech Stack</h3>
+                    <a href="#">Frontend Development</a>
+                    <a href="#">Backend with Node.js</a>
+                    <a href="#">Python Programming</a>
+                    <a href="#">MongoDB Database</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Subscribe</h3>
+                    <p>Subscribe to my newsletter to follow my learning journey and project updates.
+                    </p>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <input type="email" class="form-control" placeholder="Enter your email"
+                          style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: white;">
+                        <button class="btn"
+                          style="margin-top: 10px; width: 100%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3);">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 Odono John Jachukwu. All rights reserved. | WDD 130 Student Project
+                </p>
+                <p style="margin-top: 10px;">Full-stack website with Node.js backend and MongoDB
+                    database</p>
+            </div>
+        </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script>
+        // API Configuration
+        const API_BASE_URL = 'http://localhost:5000/api';
+
+        // Preloader
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active')
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+        // Check for saved theme or prefered scheme
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+            document.body.classList.add('dark-mode');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+
+            // Update active nav link based on scroll position
+            updateActiveNavLink();
+        });
+
+        // Animate on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+
+                if (elementPosition < screenPosition) {
+                    element.classList.add('visible');
+
+                    // Animate progress bars
+                    if (element.querySelector('.progress-fill')) {
+                        const progressFill = element.querySelector('.progress-fill');
+                        const width = progressFill.getAttribute('data-width');
+                        setTimeout(() => {
+                            progressFill.style.width = width + '%';
+                        }, 300);
+                    }
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        // Initial check
+        animateOnScroll();
+
+        // Counter animation for stats
+        const animateCounters = () => {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200;
+
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-count');
+                const count = +counter.innerText;
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        };
+
+        // Start counter animation when stats are in view
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const statsSection = document.querySelector('.hero-stats');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        // Update active nav link based on scroll position
+        function updateActiveNavLink() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+
+            let currentSection = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add floating animation to elements
+        function addFloatingAnimation() {
+            const floatingElements = document.querySelectorAll('.floating-element');
+            floatingElements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 2}s`;
+            });
+        }
+
+        addFloatingAnimation();
+
+        // ==================== AUTHENTICATION SYSTEM ====================
+
+        // Auth Modal Elements
+        const authModal = document.getElementById('authModal');
+        const authClose = document.getElementById('authClose');
+        const authNavLink = document.getElementById('authNavLink');
+        const authNavItem = document.getElementById('authNavItem');
+        const adminNavItem = document.getElementById('adminNavItem');
+        const logoutBtn = document.getElementById('logoutBtn');
+        const adminPanel = document.getElementById('admin');
+
+        // Auth Tabs
+        const authTabs = document.querySelectorAll('.auth-tab');
+        const authForms = document.querySelectorAll('.auth-form');
+
+        authTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabName = tab.getAttribute('data-tab');
+
+                // Update active tab
+                authTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Show corresponding form
+                authForms.forEach(form => {
+                    form.classList.remove('active');
+                    if (form.id === `${tabName}Form`) {
+                        form.classList.add('active');
+                    }
+                });
+
+                // Clear errors
+                clearFormErrors(tabName);
+            });
+        });
+
+        // Open auth modal
+        authNavLink.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const token = localStorage.getItem('token');
+            if (token) {
+                // User is logged in, show admin panel
+                showAdminPanel();
+            } else {
+                // User is not logged in, show auth modal
+                authModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+
+        // Close auth modal
+        authClose.addEventListener('click', () => {
+            authModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            clearAllFormErrors();
+        });
+
+        // Close modal when clicking outside
+        authModal.addEventListener('click', (e) => {
+            if (e.target === authModal) {
+                authModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                clearAllFormErrors();
+            }
+        });
+
+        // Login Form Submission
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            // Clear previous errors
+            clearFormErrors('login');
+
+            // Validate
+            let hasError = false;
+
+            if (!email) {
+                showError('loginEmailError', 'Email is required');
+                hasError = true;
+            }
+
+            if (!password) {
+                showError('loginPasswordError', 'Password is required');
+                hasError = true;
+            }
+
+            if (hasError) return;
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/auth/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Save token and user info
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('user', JSON.stringify(data.user));
+
+                    // Show success message
+                    showSuccess('loginSuccess', 'Login successful!');
+
+                    // Update UI
+                    setTimeout(() => {
+                        authModal.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                        updateAuthUI();
+
+                        // If user is admin, show admin panel
+                        if (data.user.role === 'admin') {
+                            showAdminPanel();
+                        }
+                    }, 1500);
+                } else {
+                    showError('loginError', data.error || 'Login failed');
+                }
+            } catch (error) {
+                showError('loginError', 'Server error. Please try again.');
+            }
+        });
+
+        // Register Form Submission
+        const registerForm = document.getElementById('registerForm');
+        registerForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('registerName').value;
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('registerConfirmPassword').value;
+
+            // Clear previous errors
+            clearFormErrors('register');
+
+            // Validate
+            let hasError = false;
+
+            if (!name) {
+                showError('registerNameError', 'Name is required');
+                hasError = true;
+            }
+
+            if (!email) {
+                showError('registerEmailError', 'Email is required');
+                hasError = true;
+            }
+
+            if (!password) {
+                showError('registerPasswordError', 'Password is required');
+                hasError = true;
+            }
+
+            if (password.length < 6) {
+                showError('registerPasswordError', 'Password must be at least 6 characters');
+                hasError = true;
+            }
+
+            if (password !== confirmPassword) {
+                showError('registerConfirmPasswordError', 'Passwords do not match');
+                hasError = true;
+            }
+
+            if (hasError) return;
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/auth/register`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email, password })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Save token and user info
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('user', JSON.stringify(data.user));
+
+                    // Show success message
+                    showSuccess('registerSuccess', 'Registration successful!');
+
+                    // Update UI
+                    setTimeout(() => {
+                        authModal.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                        updateAuthUI();
+                    }, 1500);
+                } else {
+                    showError('registerError', data.error || 'Registration failed');
+                }
+            } catch (error) {
+                showError('registerError', 'Server error. Please try again.');
+            }
+        });
+
+        // Logout
+        logoutBtn.addEventListener('click', () => {
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            updateAuthUI();
+            hideAdminPanel();
+        });
+
+        // Update authentication UI based on login state
+        function updateAuthUI() {
+            const token = localStorage.getItem('token');
+            const user = JSON.parse(localStorage.getItem('user') || '{}');
+
+            if (token && user.role === 'admin') {
+                authNavLink.textContent = 'Admin';
+                adminNavItem.style.display = 'block';
+            } else if (token) {
+                authNavLink.textContent = 'Dashboard';
+                adminNavItem.style.display = 'none';
+            } else {
+                authNavLink.textContent = 'Login';
+                adminNavItem.style.display = 'none';
+            }
+        }
+
+        // Show admin panel
+        function showAdminPanel() {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show admin panel
+            adminPanel.style.display = 'block';
+            adminPanel.classList.add('active');
+
+            // Update navigation
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector('a[href="#admin"]').classList.add('active');
+
+            // Load contacts
+            loadContacts();
+        }
+
+        // Hide admin panel
+        function hideAdminPanel() {
+            // Show all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'block';
+            });
+
+            // Hide admin panel
+            adminPanel.style.display = 'none';
+            adminPanel.classList.remove('active');
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Load contacts for admin panel
+        async function loadContacts() {
+            const token = localStorage.getItem('token');
+
+            if (!token) return;
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/contact`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    displayContacts(data.data);
+                }
+            } catch (error) {
+                console.error('Error loading contacts:', error);
+            }
+        }
+
+        // Display contacts in admin table
+        function displayContacts(contacts) {
+            const tableBody = document.getElementById('contactsTableBody');
+            const adminSpinner = document.getElementById('adminSpinner');
+            const adminTableContainer = document.getElementById('adminTableContainer');
+
+            // Hide spinner, show table
+            adminSpinner.style.display = 'none';
+            adminTableContainer.style.display = 'block';
+
+            // Clear table
+            tableBody.innerHTML = '';
+
+            // Add contacts to table
+            contacts.forEach(contact => {
+                const row = document.createElement('tr');
+
+                // Format date
+                const date = new Date(contact.createdAt).toLocaleDateString();
+
+                // Status badge
+                let statusClass = 'status-new';
+                let statusText = 'New';
+
+                if (contact.status === 'read') {
+                    statusClass = 'status-read';
+                    statusText = 'Read';
+                } else if (contact.status === 'replied') {
+                    statusClass = 'status-replied';
+                    statusText = 'Replied';
+                }
+
+                row.innerHTML = `
+                    <td>${contact.name}</td>
+                    <td>${contact.email}</td>
+                    <td>${contact.subject}</td>
+                    <td><span class="status-badge ${statusClass}">${statusText}</span></td>
+                    <td>${date}</td>
+                    <td>
+                        <div class="admin-actions">
+                            <button class="admin-action-btn read" onclick="updateContactStatus('${contact._id}', 'read')">Mark Read</button>
+                            <button class="admin-action-btn replied" onclick="updateContactStatus('${contact._id}', 'replied')">Mark Replied</button>
+                            <button class="admin-action-btn delete" onclick="deleteContact('${contact._id}')">Delete</button>
+                        </div>
+                    </td>
+                `;
+
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Update contact status
+        window.updateContactStatus = async function (contactId, status) {
+            const token = localStorage.getItem('token');
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/contact/${contactId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ status })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    loadContacts(); // Reload contacts
+                }
+            } catch (error) {
+                console.error('Error updating contact:', error);
+            }
+        };
+
+        // Delete contact
+        window.deleteContact = async function (contactId) {
+            if (!confirm('Are you sure you want to delete this contact?')) return;
+
+            const token = localStorage.getItem('token');
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/contact/${contactId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    loadContacts(); // Reload contacts
+                }
+            } catch (error) {
+                console.error('Error deleting contact:', error);
+            }
+        };
+
+        // ==================== CONTACT FORM ====================
+
+        const contactForm = document.getElementById('contactForm');
+        const contactSubmitBtn = document.getElementById('contactSubmitBtn');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Clear previous errors
+            clearContactFormErrors();
+
+            // Validate
+            let hasError = false;
+
+            if (!name) {
+                showError('nameError', 'Name is required');
+                hasError = true;
+            }
+
+            if (!email) {
+                showError('emailError', 'Email is required');
+                hasError = true;
+            } else if (!isValidEmail(email)) {
+                showError('emailError', 'Please enter a valid email');
+                hasError = true;
+            }
+
+            if (!subject) {
+                showError('subjectError', 'Subject is required');
+                hasError = true;
+            }
+
+            if (!message) {
+                showError('messageError', 'Message is required');
+                hasError = true;
+            }
+
+            if (hasError) return;
+
+            // Disable submit button
+            contactSubmitBtn.disabled = true;
+            contactSubmitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/contact`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email, subject, message })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Show success message
+                    showSuccess('contactSuccess', 'Thank you for your message! I will get back to you soon.');
+
+                    // Reset form
+                    contactForm.reset();
+
+                    // If user is admin, refresh contacts in admin panel
+                    if (localStorage.getItem('token')) {
+                        loadContacts();
+                    }
+                } else {
+                    showError('contactError', data.error || 'Failed to send message');
+                }
+            } catch (error) {
+                showError('contactError', 'Server error. Please try again.');
+            } finally {
+                // Re-enable submit button
+                contactSubmitBtn.disabled = false;
+                contactSubmitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+            }
+        });
+
+        // ==================== HELPER FUNCTIONS ====================
+
+        function showError(elementId, message) {
+            const element = document.getElementById(elementId);
+            element.textContent = message;
+            element.classList.add('active');
+        }
+
+        function showSuccess(elementId, message) {
+            const element = document.getElementById(elementId);
+            element.textContent = message;
+            element.classList.add('active');
+        }
+
+        function clearFormErrors(formType) {
+            const errorElements = document.querySelectorAll(`#${formType}Form .form-error`);
+            const successElements = document.querySelectorAll(`#${formType}Form .form-success`);
+
+            errorElements.forEach(el => {
+                el.textContent = '';
+                el.classList.remove('active');
+            });
+
+            successElements.forEach(el => {
+                el.textContent = '';
+                el.classList.remove('active');
+            });
+        }
+
+        function clearAllFormErrors() {
+            document.querySelectorAll('.form-error, .form-success').forEach(el => {
+                el.textContent = '';
+                el.classList.remove('active');
+            });
+        }
+
+        function clearContactFormErrors() {
+            document.querySelectorAll('#contactForm .form-error, #contactForm .form-success').forEach(el => {
+                el.textContent = '';
+                el.classList.remove('active');
+            });
+        }
+
+        function isValidEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        // ==================== INITIALIZATION ====================
+
+        // Initialize animations on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add visible class to elements already in view
+            animateOnScroll();
+
+            // Set initial active nav link
+            updateActiveNavLink();
+
+            // Initialize progress bars
+            document.querySelectorAll('.progress-fill').forEach(fill => {
+                fill.style.width = '0%';
+            });
+
+            // Update auth UI based on stored token
+            updateAuthUI();
+
+            // Check if we should show admin panel (if URL has #admin and user is logged in)
+            if (window.location.hash === '#admin') {
+                const token = localStorage.getItem('token');
+                const user = JSON.parse(localStorage.getItem('user') || '{}');
+
+                if (token && user.role === 'admin') {
+                    showAdminPanel();
+                }
+            }
+        });
+
+        // Health check - test API connection
+        async function checkApiHealth() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/health`);
+                const data = await response.json();
+                console.log('API Health:', data);
+            } catch (error) {
+                console.warn('API is not reachable. Make sure backend server is running on port 5000.');
+            }
+        }
+
+        // Check API health after page loads
+        setTimeout(checkApiHealth, 2000);
+    </script>
 </body>
 
 </html>

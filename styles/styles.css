@@ -1,6 +1,6 @@
 * {
-    margin: o;
-    padding: o;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -10,19 +10,33 @@ body {
 }
 
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    background-color: steelblue;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
-    color: white;
     display: block;
-    padding: 20px;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    /* shorthand for white */
 }
 
 h1 {
     color: darkblue;
     padding: 5rem;
+}
+
+header,
+.grid,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
 }
 
 img {
@@ -36,24 +50,33 @@ img {
 }
 
 p {
-    padding: 0px;
+    padding: 0;
     margin: 1rem;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
 }
 
 main {
     max-width: 840px;
+    grid-column: 2/3;
+    margin: 1rem;
 }
 
 aside {
     width: 20rem;
     margin: 1rem;
     border: 1px solid rgb(0 0 0 / 0.2);
-    /* 1 */
     padding: 1rem;
     background-color: #eee;
     color: #333;
-    text-align: centre;
+    text-align: center;
+    /* fixed spelling */
     position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 aside img {
@@ -76,20 +99,43 @@ main img {
 }
 
 footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
-    text-align: center;
+    background-color: var(--accent1-color);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-radius: 8px 8px 0 0;
 }
 
-/* class selectors */
-.box {
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 10%);
-    padding: 1rem;
-    background-color: #ddd;
-    color: #000;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.indent {
-    padding-left: 1rem;
+.copyright {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+socialmedia a:hover {
+    transform: translateY(-5px);
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
 }
