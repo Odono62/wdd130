@@ -1,37 +1,35 @@
 /* ============================================
-   CSS Variables for Theming
+   CSS Variables – single source of truth
    ============================================ */
 :root {
-    --primary-color: #1a5f7a;
-    --secondary-color: #2d8b6d;
-    --accent1-color: #0a2e4e;
-    --accent2-color: #e8f4f8;
-    --heading-font: Georgia, serif;
-    --body-font: Arial, Helvetica, sans-serif;
+    --primary: #1a5f7a;
+    --secondary: #1e6b52;
+    /* darker green for AA contrast */
+    --accent1: #0a2e4e;
+    --accent2: #e8f4f8;
+    --heading: Georgia, serif;
+    --body: Arial, Helvetica, sans-serif;
 }
 
 /* ============================================
-   CSS Reset - Box Model Normalization
+   Reset – once only
    ============================================ */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 /* ============================================
-   Base Styles
+   Base
    ============================================ */
 body {
-    font-family: var(--body-font);
-    color: var(--accent1-color);
+    font-family: var(--body);
+    color: var(--accent1);
     line-height: 1.6;
-    background-color: #f8fafc;
+    background: #f8fafc;
 }
 
 h1,
@@ -40,418 +38,17 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--heading-font);
+    font-family: var(--heading);
+    color: var(--primary);
 }
 
 /* ============================================
-   Layout Container
-   ============================================ */
-header,
-main,
-footer {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* ============================================
-   Header with Logo
+   Header (grid) + Nav (flex)
    ============================================ */
 header {
-    background-color: white;
+    background: white;
     padding: 1rem 0;
-    margin-bottom: 2rem;
-    border-bottom: 3px solid var(--secondary-color);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.header-container {
-    display: grid;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 80px;
-    width: auto;
-    transition: transform 0.3s ease;
-}
-
-.logo img:hover {
-    transform: scale(1.05);
-}
-
-/* ============================================
-   Navigation
-   ============================================ */
-.main-nav {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: var(--accent1-color);
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    font-size: 1.1rem;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-/* ============================================
-   Hero Section with Overlay
-   ============================================ */
-.hero {
-    position: relative;
-    margin-bottom: 3rem;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    right: 0;
-    background-color: rgba(26, 95, 122, 0.9);
-    color: white;
-    padding: 1.5rem;
-    text-align: center;
-    font-size: 2.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    z-index: 2;
-}
-
-.hero article {
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
-    width: 350px;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    z-index: 2;
-}
-
-.hero article img {
-    float: right;
-    width: 125px;
-    height: 125px;
-    object-fit: cover;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    border: 3px solid var(--secondary-color);
-}
-
-.hero article p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--accent1-color);
-    text-align: justify;
-}
-
-/* ============================================
-   Section Styles
-   ============================================ */
-section {
-    margin: 2.5rem 0;
-    padding: 2rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.history h2,
-.adventure h2 {
-    font-size: 2.2rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    border-bottom: 3px solid var(--secondary-color);
-    padding-bottom: 0.5rem;
-    text-align: center;
-}
-
-.history p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #333;
-    margin-bottom: 1rem;
-}
-
-.history-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 2rem;
-}
-
-.history-content p {
-    flex: 1;
-    min-width: 300px;
-}
-
-.history-content img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 3px solid var(--secondary-color);
-}
-
-/* ============================================
-   Adventure Gallery
-   ============================================ */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.gallery figure {
-    margin: 0;
-    text-align: center;
-}
-
-.gallery img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 6px;
-    border: 2px solid var(--accent2-color);
-    transition: all 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-    border-color: var(--secondary-color);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.gallery figcaption {
-    margin-top: 0.5rem;
-    font-size: 1rem;
-    color: var(--accent1-color);
-    font-weight: 500;
-}
-
-/* ============================================
-   Footer Styles
-   ============================================ */
-footer {
-    background-color: var(--accent1-color);
-    color: white;
-    padding: 2rem 0;
-    margin-top: 3rem;
-    border-radius: 8px 8px 0 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.copyright {
-    font-size: 0.9rem;
-    color: #cbd5e1;
-}
-
-.socialmedia {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.socialmedia a {
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.socialmedia a:hover {
-    transform: translateY(-5px);
-}
-
-.socialmedia img {
-    width: 32px;
-    height: 32px;
-}
-
-/* ============================================
-   Responsive Design
-   ============================================ */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
-
-    .logo img {
-        height: 60px;
-    }
-
-    .main-nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-        padding: 1rem;
-        top: 20px;
-    }
-
-    .hero article {
-        position: relative;
-        width: auto;
-        right: auto;
-        bottom: auto;
-        margin: 2rem;
-    }
-
-    .hero img {
-        height: 400px;
-    }
-
-    .history-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: center;
-    }
-
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    .main-nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .hero article {
-        padding: 1rem;
-        margin: 1rem;
-    }
-
-    .hero article img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .gallery {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .gallery img {
-        height: 200px;
-    }
-}
-
-/* ============================================
-   CSS Variables for Theming
-   ============================================ */
-:root {
-    --primary-color: #1a5f7a;
-    --secondary-color: #1e6b52;
-    --accent1-color: #0a2e4e;
-    --accent2-color: #e8f4f8;
-    --heading-font: Georgia, serif;
-    --body-font: Arial, Helvetica, sans-serif;
-}
-
-/* ============================================
-   CSS Reset
-   ============================================ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/* ============================================
-   Base Styles
-   ============================================ */
-body {
-    font-family: var(--body-font);
-    color: var(--accent1-color);
-    line-height: 1.6;
-    background-color: #f8fafc;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-/* ============================================
-   Header
-   ============================================ */
-header {
-    background-color: white;
-    padding: 1rem 0;
-    border-bottom: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--secondary);
 }
 
 .header-grid {
@@ -466,11 +63,13 @@ header {
 
 .logo img {
     height: 80px;
+    transition: transform 0.3s;
 }
 
-/* ============================================
-   Navigation
-   ============================================ */
+.logo img:hover {
+    transform: scale(1.05);
+}
+
 .nav-flex {
     display: flex;
     list-style: none;
@@ -480,14 +79,16 @@ header {
 
 .nav-flex a {
     text-decoration: none;
-    color: var(--accent1-color);
+    color: var(--accent1);
     font-weight: 500;
     padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: 0.3s;
 }
 
 .nav-flex a:hover,
 .nav-flex a.active {
-    background-color: var(--primary-color);
+    background: var(--primary);
     color: white;
 }
 
@@ -495,7 +96,7 @@ header {
    Contact Hero
    ============================================ */
 .contact-hero {
-    background-color: var(--primary-color);
+    background: var(--primary);
     color: white;
     text-align: center;
     padding: 3rem 2rem;
@@ -509,7 +110,7 @@ header {
 }
 
 /* ============================================
-   Contact Container
+   Contact Layout – 2‑column grid
    ============================================ */
 .contact-container {
     display: grid;
@@ -520,12 +121,9 @@ header {
     padding: 0 20px;
 }
 
-/* ============================================
-   Company Info
-   ============================================ */
 .company-info,
 .contact-form-section {
-    background-color: white;
+    background: white;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -534,7 +132,7 @@ header {
 .company-info h2,
 .contact-form-section h2 {
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary);
     padding-bottom: 0.5rem;
 }
 
@@ -545,7 +143,7 @@ header {
 }
 
 .contact-item h3 {
-    color: #0a2e4e;
+    color: var(--accent1);
     margin-bottom: 0.5rem;
 }
 
@@ -557,7 +155,7 @@ header {
 }
 
 /* ============================================
-   Contact Form
+   Form
    ============================================ */
 .form-group {
     margin-bottom: 1.5rem;
@@ -573,13 +171,15 @@ header {
 .form-group textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 2px solid var(--accent2-color);
+    border: 2px solid var(--accent2);
     border-radius: 6px;
     font-size: 1rem;
 }
 
-.form-group textarea {
-    font-family: var(--body-font);
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
 }
 
 .radio-group {
@@ -588,31 +188,76 @@ header {
     gap: 0.8rem;
 }
 
-.radio-option {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
+.radio-option,
 .checkbox-option {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
+.radio-option input,
+.checkbox-option input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.radio-custom,
+.checkbox-custom {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--secondary);
+    margin-right: 10px;
+}
+
+.radio-custom {
+    border-radius: 50%;
+}
+
+.radio-option input:checked + .radio-custom::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: var(--secondary);
+    border-radius: 50%;
+    margin: 2px;
+}
+
+.checkbox-custom {
+    border-radius: 4px;
+}
+
+.checkbox-option input:checked + .checkbox-custom::after {
+    content: "✓";
+    color: var(--secondary);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 .submit-btn {
-    background-color: var(--primary-color);
+    background: var(--primary);
     color: white;
     border: none;
     padding: 1rem 2rem;
     font-size: 1.1rem;
+    font-weight: 600;
     border-radius: 6px;
     cursor: pointer;
     width: 100%;
+    transition: 0.3s;
 }
 
 .submit-btn:hover {
-    background-color: var(--secondary-color);
+    background: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* ============================================
@@ -636,28 +281,39 @@ header {
 }
 
 .employee {
-    background-color: white;
+    background: white;
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.employee:hover {
+    transform: translateY(-5px);
 }
 
 .employee img {
     width: 100%;
     height: 250px;
     object-fit: cover;
+    border-bottom: 3px solid var(--secondary);
 }
 
 .employee figcaption {
     padding: 1.5rem;
 }
 
+.employee h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
 /* ============================================
    Footer
    ============================================ */
 footer {
-    background-color: var(--accent1-color);
+    background: var(--accent1);
     color: white;
     padding: 2rem 0;
 }
@@ -673,6 +329,7 @@ footer {
 
 .copyright {
     font-size: 0.9rem;
+    color: #cbd5e1;
 }
 
 .socialmedia {
@@ -680,14 +337,22 @@ footer {
     gap: 1.5rem;
 }
 
+.socialmedia a {
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.socialmedia a:hover {
+    transform: translateY(-5px);
+}
+
 .socialmedia img {
     width: 32px;
     height: 32px;
-    filter: ;
 }
 
 /* ============================================
-   Responsive Design
+   Responsive – one media query section
    ============================================ */
 @media (max-width: 768px) {
     .header-grid {
@@ -698,6 +363,7 @@ footer {
     .nav-flex {
         justify-content: center;
         flex-wrap: wrap;
+        gap: 1rem;
     }
 
     .contact-container {
@@ -712,7 +378,7 @@ footer {
 
     .footer-content {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
         text-align: center;
     }
 }
