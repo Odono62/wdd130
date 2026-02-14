@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
       content="Contact Rapids White Water Rafting for inquiries, reservations, or questions about our white water rafting adventures.">
-    <meta name="author" content="Odono John Jachukwu">
+    <meta name="author" content="Odono John Jachuwku">
     <title>Contact Us - Rapids White Water Rafting</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
@@ -28,34 +28,15 @@
         </div>
     </header>
 
-    <main class="contact-main">
-        <div class="contact-hero">
+    <main>
+        <section class="contact-info">
             <h1>Contact Rapids White Water Rafting</h1>
-            <p>Get in touch with our team for questions, reservations, or inquiries!</p>
-        </div>
-
-        <div class="contact-container">
-            <section class="company-info">
+            <div class="company-details">
                 <h2>Rapids White Water Rafting Company</h2>
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <h3>Address</h3>
-                        <p>123 Main River Street<br>Kolob, California 92345</p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>Phone</h3>
-                        <p>+1 (999) 999-9999<br>Emergency: (888) 888-8888</p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>Email</h3>
-                        <p>odonoj62@gmail.com<br>odonoj63@gmail.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>Business Hours</h3>
-                        <p>Mon-Fri: 8AM-6PM<br>Sat: 8AM-8PM<br>Sun: 9AM-5PM</p>
-                    </div>
-                </div>
-
+                <p>123 Main River Street<br>Kolob, California 92345</p>
+                <p>Phone: +1 (999) 999-9999<br>Emergency: +1 (888) 888-8888</p>
+                <p>Email: Odonoj62@gmail.com<br>Odonoj62@gmail.com</p>
+                <p>Hours: Mon-Fri 8AM-6PM, Sat 8AM-8PM, Sun 9AM-5PM</p>
                 <div class="map-container">
                     <h3>Find Us</h3>
                     <iframe
@@ -64,66 +45,59 @@
                       title="Rapids White Water Rafting Location in Kolob, California">
                     </iframe>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="contact-form-section">
-                <h2>Send Us a Message</h2>
-                <form class="contact-form" action="thanks.html" method="get">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your full name"
-                          required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your email address"
-                          required>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Message Purpose</label>
-                        <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" id="general-inquiry" name="purpose"
-                                  value="general-inquiry" required>
-                                <span class="radio-custom"></span>
-                                General Inquiry
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" id="reservation-question" name="purpose"
-                                  value="reservation-question">
-                                <span class="radio-custom"></span>
-                                Reservation Question
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" id="website-suggestion" name="purpose"
-                                  value="website-suggestion">
-                                <span class="radio-custom"></span>
-                                Website Suggestion
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6"
-                          placeholder="Type your message here..." required></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="checkbox-option">
-                            <input type="checkbox" id="newsletter" name="newsletter"
-                              value="subscribe">
-                            <span class="checkbox-custom"></span>
-                            Please subscribe me to the monthly newsletter
+        <section class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <form class="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address"
+                      required>
+                </div>
+                <div class="form-group">
+                    <label>Message Purpose</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" id="general-inquiry" name="purpose"
+                              value="general-inquiry" required>
+                            <span class="radio-custom"></span>
+                            General Inquiry
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" id="reservation-question" name="purpose"
+                              value="reservation-question">
+                            <span class="radio-custom"></span>
+                            Reservation Question
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" id="website-suggestion" name="purpose"
+                              value="website-suggestion">
+                            <span class="radio-custom"></span>
+                            Website Suggestion
                         </label>
                     </div>
-
-                    <button type="submit" class="submit-btn">Get in Touch!</button>
-                </form>
-            </section>
-        </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6"
+                      placeholder="Type your message here..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-option">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="subscribe">
+                        <span class="checkbox-custom"></span>
+                        Please subscribe me to the monthly newsletter
+                    </label>
+                </div>
+                <button type="submit" class="submit-btn">Get in Touch!</button>
+            </form>
+        </section>
 
         <section class="employee-profiles">
             <h2>We Are Here to Serve You</h2>
@@ -160,7 +134,7 @@
         <div class="footer-content">
             <p class="copyright">© 2026 Rapids White Water Rafting | Odono John Jachuwku</p>
             <nav class="socialmedia">
-                <a href="https://facebook.com" target="_blank" rel="noopener">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
                     <img src="images/facebook.svg" alt="Facebook">
                 </a>
                 <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
