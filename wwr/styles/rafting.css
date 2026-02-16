@@ -112,14 +112,16 @@ header {
 /* ============================================
    Contact Layout – 2‑column grid
    ============================================ */
+@media (max-width:768px) {
 .contact-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto 3rem;
     padding: 0 20px;
 }
+    }
 
 .company-info,
 .contact-form-section {
@@ -367,7 +369,10 @@ footer {
     }
 
     .contact-container {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
     }
 
     .employees-grid {
